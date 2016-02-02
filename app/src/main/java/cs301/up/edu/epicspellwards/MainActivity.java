@@ -1,5 +1,16 @@
 package cs301.up.edu.epicspellwards;
 
+/**
+ * @author Markus Perry, Elizabeth Mukai, Scott Zimmerman, Teresa Condon.
+ * =====EVENTS IMPLEMENTED=======
+ * -When user taps cards in hand they become highlighted and return to normal
+ *      upon clicking again
+ * -When Ready button is clicked all unselected cards go poof.
+ * -When mute button is pressed the volume control and view go poof
+ * -Slider controls volume displayed in adjacent Text View
+ *
+ */
+
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -45,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // creates the spinner Menu
         String[] menu = {"Menu","Return to Game","Quit to Home Screen","Settings"};
 
+        //Instantiates Spinner
         Spinner mSpinner = (Spinner)findViewById(R.id.menuSpinner);
         ArrayAdapter menus = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, menu);
         mSpinner.setAdapter(menus);
@@ -77,6 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         card8 = (ImageButton)findViewById(R.id.card8Button);
         card8.setOnClickListener(this);
 
+        //Array of all cards in hand
         cardHands = new ImageButton[8];
 
         // instantiate the volume seekBar and its TextView

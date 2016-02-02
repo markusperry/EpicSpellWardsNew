@@ -263,7 +263,7 @@
                 android:textStyle="bold" />
 
             <SeekBar
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:id="@+id/volumeControl"
                 android:layout_weight="1"
