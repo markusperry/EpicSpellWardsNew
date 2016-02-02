@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="cs301.up.edu.epicspellwards.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:orientation="vertical"
+    android:background="@drawable/maxresdefault"
+    android:id="@+id/background"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/topHalf">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/menuPlayerBar">
+
+            <Spinner
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/menuSpinner"
+                android:background="#FFDDDDDD"
+                android:contextClickable="true"
+                android:clickable="false"
+                android:text="Menu"
+                android:textAlignment="center"
+                android:spinnerMode="dropdown" />
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:id="@+id/playerLeftPicture"
+                android:src="@drawable/nux"
+                android:scaleType="fitXY"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="125dp" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/playerLeftStats"
+                android:layout_marginTop="5dp"
+                android:background="#000000">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/positionLeft"
+                    android:id="@+id/playerLeftPosition"
+                    android:textColor="#ffffff"
+                    android:typeface="serif"
+                    android:paddingLeft="2dp"
+                    android:layout_marginRight="5dp"
+                    android:phoneNumber="false"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fullHealth"
+                    android:id="@+id/playerLeftHealthView"
+                    android:typeface="serif"
+                    android:textColor="#ffffff"
+                    android:paddingLeft="2dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/NuxMessageOne"
+                    android:id="@+id/playerLeftMessage"
+                    android:textColor="#ffffff"
+                    android:typeface="serif"
+                    android:textStyle="bold"
+                    android:paddingLeft="2dp"
+                    android:layout_marginRight="3dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:id="@+id/playerFrontPicture"
+                android:src="@drawable/nux2"
+                android:scaleType="fitXY"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="3dp" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:background="#000000"
+                android:id="@+id/playerFrontStates">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/positionFront"
+                    android:id="@+id/playerFrontPosition"
+                    android:textColor="#ffffff"
+                    android:typeface="serif"
+                    android:textStyle="bold"
+                    android:paddingLeft="2dp"
+                    android:layout_marginRight="3dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fullHealth"
+                    android:id="@+id/playerFrontHealth"
+                    android:paddingLeft="2dp"
+                    android:typeface="serif"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/NuxMessageTwo"
+                    android:id="@+id/playerFrontMessage"
+                    android:paddingLeft="2dp"
+                    android:typeface="serif"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:layout_marginRight="3dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:id="@+id/playerRightPicture"
+                android:src="@drawable/nux3"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="5dp" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:background="#000000"
+                android:id="@+id/playerRightStats">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/positionRight"
+                    android:id="@+id/playerRightPosition"
+                    android:textColor="#ffffff"
+                    android:typeface="serif"
+                    android:textStyle="bold"
+                    android:paddingLeft="2dp"
+                    android:layout_marginRight="3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fullHealth"
+                    android:id="@+id/playerRightHealth"
+                    android:paddingLeft="2dp"
+                    android:typeface="serif"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nuxMessageThree"
+                    android:id="@+id/playerRightMessage"
+                    android:paddingLeft="2dp"
+                    android:typeface="serif"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:layout_marginRight="3dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:id="@+id/fieldLeftCard"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/leftcard"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="165dp" />
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:id="@+id/fieldCenterCard"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/centercard"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="50dp" />
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:id="@+id/fieldRightCard"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/rightcard"
+                android:layout_marginLeft="50dp"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="275dp"
+        android:layout_gravity="bottom"
+        android:background="#000000"
+        android:id="@+id/bottomHalf">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:background="#ab3430"
+            android:id="@+id/healthReadySection"
+            android:baselineAligned="false">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="@string/health"
+                android:id="@+id/playerHealthText"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="32sp"
+                android:gravity="center_vertical"
+                android:padding="5dp" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="fill_parent"
+                android:text="@string/fullIndicator"
+                android:id="@+id/greenHealthBar"
+                android:background="#11ff00"
+                android:padding="8dp"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/volumeControl"
+                android:layout_weight="1"
+                android:indeterminate="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text=""
+                android:id="@+id/volumeView"
+                android:paddingTop="25dp"
+                android:layout_marginRight="5dp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="@string/mute"
+                android:id="@+id/muteButton"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:typeface="serif"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/readyButton"
+                android:text="@string/readyString"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="1"
+            android:id="@+id/cardSection">
+
+            <ImageButton
+                android:layout_width="125dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/card1Button"
+                android:src="@drawable/playercard1"
+                android:cropToPadding="false"
+                android:padding="2dp"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:layout_weight="1"
+                android:clickable="true"/>
+
+            <ImageButton
+                android:layout_width="125dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/card2Button"
+                android:src="@drawable/playercard2"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:cropToPadding="false"
+                android:padding="2dp"
+                android:layout_weight="1"
+                android:clickable="true"/>
+
+            <ImageButton
+                android:layout_width="125dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/card3Button"
+                android:src="@drawable/playercard3"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:cropToPadding="false"
+                android:padding="2dp"
+                android:layout_weight="1"
+                android:clickable="true"/>
+
+            <ImageButton
+                android:layout_width="125dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/card4Button"
+                android:src="@drawable/playercard4"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:cropToPadding="false"
+                android:padding="2dp"
+                android:layout_weight="1"
+                android:clickable="true"/>
+
+            <ImageButton
+                android:layout_width="125dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/card5Button"
+                android:src="@drawable/playercard5"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:cropToPadding="false"
+                android:padding="2dp"
+                android:layout_weight="1"
+                android:clickable="true"/>
+
+            <ImageButton
+                android:layout_width="125dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/card6Button"
+                android:src="@drawable/playercard6"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:cropToPadding="false"
+                android:padding="2dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                />
+
+            <ImageButton
+                android:layout_width="125dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/card7Button"
+                android:src="@drawable/playercard7"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:cropToPadding="false"
+                android:padding="2dp"
+                android:layout_weight="1"
+                android:clickable="true" />
+
+            <ImageButton
+                android:layout_width="125dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/card8Button"
+                android:src="@drawable/playercard8"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:cropToPadding="false"
+                android:padding="2dp"
+                android:layout_weight="1"
+                android:clickable="true"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

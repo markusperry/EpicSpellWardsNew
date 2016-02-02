@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">EpicSpellWards</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu">MENU</string>
+    <string name="health">Health: </string>
+    <string name="fullIndicator">FULL</string>
+    <string name="readyString">Ready</string>
+    <string name="positionLeft">Position: Left</string>
+    <string name="fullHealth">Health: 100</string>
+    <string name="NuxMessageOne">I will Destroy you!</string>
+    <string name="positionFront">Position: Front</string>
+    <string name="NuxMessageTwo">Nuxious Maximus!</string>
+    <string name="positionRight">Position: Right</string>
+    <string name="nuxMessageThree">Bippidy Boppidy Boo</string>
+    <string name="mute">MUTE</string>
+</resources>
